@@ -1,0 +1,8 @@
+--- 
+format: 1
+handler: 
+  commit: 61e7f0837859a09511dc58391e4922efa4cd62b6
+  branch: master
+lock: false
+repository_class: Piston::Git::Repository
+repository_url: https://github.com/fgelinas/timepicker.git
