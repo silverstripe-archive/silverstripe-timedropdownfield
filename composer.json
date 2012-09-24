@@ -1,0 +1,20 @@
+{
+	"name": "silverstripe-labs/timedropdownfield",
+	"description": "Allows to select certain time intervals from a dropdown
+		as an alternative to direct input into a 'TimeField'.
+		Adheres to user preferences in time formats set through
+		the 'TimeField' API, which by extension supports user preferences
+		through 'i18n::get_time_format()'.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe-labs", "timedropdownfield"],
+	"authors": [
+	{
+		"name": "Ingo Schommer",
+		"email": "ingo@silverstripe.com"
+	}
+	],
+	"require":
+	{
+		"silverstripe/framework": "2.5"
+	}
+}
