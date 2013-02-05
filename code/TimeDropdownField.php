@@ -22,7 +22,7 @@ class TimeDropdownField extends TimeField {
 		$html = parent::Field();
 		
 		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-		Requirements::javascript('timedropdownfield/thirdparty/jquery-entwine/jquery.entwine-dist.js');
+		Requirements::javascript('framework/thirdparty/jquery-entwine/dist/jquery.entwine-dist.js');
 		Requirements::javascript('timedropdownfield/javascript/TimeDropdownField.js');
 		Requirements::css('timedropdownfield/javascript/TimeDropdownField.css');
 		
