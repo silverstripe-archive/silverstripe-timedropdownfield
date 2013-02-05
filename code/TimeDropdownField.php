@@ -4,7 +4,7 @@ require_once 'Zend/Date.php';
 class TimeDropdownField extends TimeField {
 	
 	static $default_config = array(
-		'interval' => Zend_Date::HOUR
+		'interval' => 60
 	);
 	
 	function __construct($name, $title = null, $value = ""){
@@ -28,10 +28,11 @@ class TimeDropdownField extends TimeField {
 		
 		$iteratedTime = new Zend_Date('00:00:00', 'h:mm:ss');
 		$options = array();
-		for($i=0; $i<24; $i++) {
+		$count = 24*(60/$this->config['interval']);
+		for($i=0; $i<$count; $i++) {
 			$key = $iteratedTime->toString($this->getConfig('datavalueformat'));
 			$options[$key] = $iteratedTime->toString($this->getConfig('timeformat'));
-			$iteratedTime->add(1, $this->config['interval']);
+			$iteratedTime->add($this->config['interval'], Zend_Date::MINUTE);
 		}
 		$dropdownField = new DropdownField($this->getName() . '_dropdown', false, $options, $this->Value());
 		$dropdownField->addExtraClass('presets');
