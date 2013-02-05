@@ -24,7 +24,7 @@ class TimeDropdownField extends TimeField {
 		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
 		Requirements::javascript('framework/thirdparty/jquery-entwine/dist/jquery.entwine-dist.js');
 		Requirements::javascript('timedropdownfield/javascript/TimeDropdownField.js');
-		Requirements::css('timedropdownfield/javascript/TimeDropdownField.css');
+		Requirements::css('timedropdownfield/css/TimeDropdownField.css');
 		
 		$iteratedTime = new Zend_Date('00:00:00', 'h:mm:ss');
 		$options = array();
