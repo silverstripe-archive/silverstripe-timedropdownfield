@@ -33,7 +33,7 @@ class TimeDropdownField extends TimeField {
 			$options[$key] = $iteratedTime->toString($this->getConfig('timeformat'));
 			$iteratedTime->add(1, $this->config['interval']);
 		}
-		$dropdownField = new DropdownField($this->Name() . '_dropdown', false, $options, $this->Value());
+		$dropdownField = new DropdownField($this->getName() . '_dropdown', false, $options, $this->Value());
 		$dropdownField->addExtraClass('presets');
 		$dropdownField->setHasEmptyDefault(true);
 		$dropdownField->setForm($this->getForm());
@@ -42,6 +42,10 @@ class TimeDropdownField extends TimeField {
 		$html .= '<a href="#" class="presets-trigger"></a>';
 		
 		return $html;
+	}
+
+	public function Type() {
+		return 'timedropdown time text';
 	}
 	
 }
