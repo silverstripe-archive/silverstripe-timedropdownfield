@@ -34,7 +34,7 @@ class TimeDropdownField extends TimeField {
 			$options[$key] = $iteratedTime->toString($this->getConfig('timeformat'));
 			$iteratedTime->add($this->config['interval'], Zend_Date::MINUTE);
 		}
-		$dropdownField = new DropdownField($this->getName() . '_dropdown', false, $options, $this->Value());
+		$dropdownField = new DropdownField('dropdown_'.$this->getName(), false, $options, $this->Value());
 		$dropdownField->addExtraClass('presets');
 		$dropdownField->setHasEmptyDefault(true);
 		$dropdownField->setForm($this->getForm());
